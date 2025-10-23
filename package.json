@@ -1,0 +1,28 @@
+{
+  "name": "playwright_webautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-nonprod": "cross-env ENV_NAME=nonProd npx playwright test",
+    "test-prod": "cross-env ENV_NAME=prod npx playwright test --headed",
+    "test_demo_fr": "cross-env ENV_NAME=nonProd npx playwright test --project=firefox --headed",
+    "debug": "cross-env ENV=nonProd npx playwright test --debug",
+    "report": "npx playwright show-report",
+    "test-demo-ui": "cross-env ENV_NAME=nonProd npx playwright test --ui ",
+    "test_uat_cr_hd": "cross-env ENV_NAME=nonProd npx playwright test --project=chromium --headed --grep @uat",
+    "test_uat_fr_hd_vi": "cross-env ENV_NAME=nonProd npx playwright test --project=firefox --headed --grep @Visual"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0"
+  },
+  "dependencies": {
+    "cross-env": "^10.0.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.2"
+  }
+}
